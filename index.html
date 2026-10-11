@@ -1,27 +1,299 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 100px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            font-size: 3em;
-            color: #ff6347;
-        }
-        p {
-            font-size: 1.2em;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blanched · Hospitality technology, London</title>
+<meta name="description" content="Blanched designs, installs and supports networks, POS and venue technology for restaurants, bars, cafés and hotels in London. New website coming soon.">
+<meta name="theme-color" content="#00594a">
+<link rel="canonical" href="https://blanched.uk/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blanched.uk/">
+<meta property="og:title" content="Blanched · Hospitality technology, London">
+<meta property="og:description" content="Networks, POS and venue technology for hospitality. New website coming soon.">
+<meta property="og:image" content="https://media.base44.com/images/public/69852901cdb7defd78cff430/4ec122df2_with_padding.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2300594a'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%2399DDCC'%3Eb%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'Arkhip';
+    src: url('https://fonts.cdnfonts.com/s/15384/Arkhip-Regular.woff') format('woff');
+    font-weight: normal; font-style: normal; font-display: swap;
+  }
+  :root {
+    --primary: #00594a;
+    --primary-deep: #003c32;
+    --primary-mid: #006f5d;
+    --accent: #00a288;
+    --mint: #99DDCC;
+    --mint-mid: #73d0b9;
+    --mint-light: #bfe9df;
+    --paper: #f6faf8;
+    --ink: #0f2a24;
+    --ink-soft: #46625b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(0,162,136,.45), transparent 60%),
+      radial-gradient(800px 500px at -10% 110%, rgba(153,221,204,.18), transparent 60%),
+      linear-gradient(160deg, var(--primary) 0%, var(--primary-deep) 100%);
+    padding: 28px 0 96px;
+  }
+  .net { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .35; pointer-events: none; }
+  .net line { stroke: var(--mint); stroke-width: 1; stroke-opacity: .35; }
+  .net circle { fill: var(--mint); }
+  .net .pulse { animation: pulse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  .net .pulse:nth-of-type(2n) { animation-delay: 1.3s; }
+  .net .pulse:nth-of-type(3n) { animation-delay: 2.6s; }
+  @keyframes pulse { 0%,100% { opacity: .35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.6); } }
+  @media (prefers-reduced-motion: reduce) { .net .pulse { animation: none; } }
+
+  .top { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { display: inline-flex; align-items: center; text-decoration: none; }
+  .brand img { width: 168px; height: auto; display: block; }
+  .wordmark { font-family: 'Arkhip', 'Inter', sans-serif; font-size: 30px; letter-spacing: .02em; color: #fff; display: none; }
+  .status {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 500; color: var(--mint-light);
+    border: 1px solid rgba(153,221,204,.35); border-radius: 999px; padding: 6px 14px;
+    background: rgba(0,60,50,.35); white-space: nowrap;
+  }
+  .status .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 0 rgba(153,221,204,.7); animation: ping 2s infinite; }
+  @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(153,221,204,.6); } 80%,100% { box-shadow: 0 0 0 10px rgba(153,221,204,0); } }
+
+  .hero-body { position: relative; margin-top: 88px; max-width: 760px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--mint); }
+  h1 {
+    font-family: 'Arkhip', 'Inter', sans-serif; font-weight: normal;
+    font-size: clamp(38px, 6.4vw, 68px); line-height: 1.05; letter-spacing: -.01em;
+    margin: 18px 0 22px;
+  }
+  h1 em { font-style: normal; color: var(--mint); }
+  .lede { font-size: clamp(17px, 2vw, 20px); color: rgba(255,255,255,.86); max-width: 620px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 600; font-size: 15px; text-decoration: none;
+    padding: 14px 22px; border-radius: 999px; transition: transform .15s ease, background .15s ease, color .15s ease;
+  }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn-primary { background: var(--mint); color: var(--primary-deep); }
+  .btn-primary:hover { background: #fff; transform: translateY(-1px); }
+  .btn-ghost { color: #fff; border: 1px solid rgba(255,255,255,.35); }
+  .btn-ghost:hover { background: rgba(255,255,255,.08); transform: translateY(-1px); }
+  .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+  /* ---------- Services ---------- */
+  .services { position: relative; margin-top: -56px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .card {
+    background: #fff; border-radius: 18px; padding: 26px 24px 28px;
+    border: 1px solid #e3efeb;
+    box-shadow: 0 1px 2px rgba(0,60,50,.04), 0 12px 32px -12px rgba(0,60,50,.18);
+  }
+  .icon {
+    width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--mint-light); color: var(--primary); margin-bottom: 18px;
+  }
+  .icon svg { width: 22px; height: 22px; }
+  .card h2 { font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--primary-deep); }
+  .card p { font-size: 14.5px; color: var(--ink-soft); }
+
+  /* ---------- About strip ---------- */
+  .about { padding: 88px 0 72px; }
+  .about-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; }
+  .about h2 {
+    font-family: 'Arkhip', 'Inter', sans-serif; font-weight: normal;
+    font-size: clamp(28px, 3.6vw, 38px); line-height: 1.15; color: var(--primary-deep);
+  }
+  .about p { color: var(--ink-soft); font-size: 16.5px; }
+  .about p + p { margin-top: 14px; }
+  .partners { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .chip {
+    font-size: 13px; font-weight: 500; color: var(--primary);
+    background: #fff; border: 1px solid #cfe7df; border-radius: 999px; padding: 7px 14px;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact { padding: 0 0 88px; }
+  .contact-card {
+    border-radius: 24px; padding: 44px 40px;
+    background: linear-gradient(135deg, var(--primary-mid), var(--primary-deep));
+    color: #fff; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
+  }
+  .contact-card h2 { font-family: 'Arkhip', 'Inter', sans-serif; font-weight: normal; font-size: clamp(24px, 3vw, 32px); line-height: 1.2; }
+  .contact-card p { color: rgba(255,255,255,.8); margin-top: 8px; max-width: 460px; }
+  .contact-links { display: flex; flex-direction: column; gap: 10px; }
+  .contact-links a {
+    display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 600; font-size: 17px;
+    padding: 12px 18px; border-radius: 14px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+    transition: background .15s ease;
+  }
+  .contact-links a:hover { background: rgba(255,255,255,.16); }
+  .contact-links svg { width: 20px; height: 20px; color: var(--mint); flex: none; }
+
+  footer { border-top: 1px solid #dfece7; padding: 26px 0 34px; font-size: 13px; color: var(--ink-soft); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 980px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .about-inner { grid-template-columns: 1fr; gap: 20px; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 16px; }
+    .hero { padding: 20px 0 84px; }
+    .brand img { width: 132px; }
+    .wordmark { font-size: 24px; }
+    .status { font-size: 12px; padding: 5px 11px; }
+    .hero-body { margin-top: 56px; }
+    .grid { grid-template-columns: 1fr; }
+    .btn { flex: 1 1 100%; justify-content: center; }
+    .about { padding: 64px 0 56px; }
+    .contact-card { padding: 32px 22px; }
+    .contact-links { width: 100%; }
+    .contact-links a { font-size: 16px; }
+  }
+</style>
 </head>
 <body>
-    <h1>Site Under Construction</h1>
-    <p>Our website is coming soon. Stay tuned!</p>
+
+<header class="hero">
+  <svg class="net" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g>
+      <line x1="760" y1="90" x2="900" y2="170"/><line x1="900" y1="170" x2="1050" y2="110"/>
+      <line x1="900" y1="170" x2="980" y2="310"/><line x1="980" y1="310" x2="1130" y2="260"/>
+      <line x1="980" y1="310" x2="860" y2="420"/><line x1="860" y1="420" x2="1010" y2="500"/>
+      <line x1="1050" y1="110" x2="1160" y2="40"/><line x1="760" y1="90" x2="680" y2="230"/>
+      <line x1="680" y1="230" x2="860" y2="420"/><line x1="1130" y1="260" x2="1010" y2="500"/>
+      <line x1="140" y1="520" x2="300" y2="560"/><line x1="40" y1="430" x2="140" y2="520"/>
+    </g>
+    <g>
+      <circle class="pulse" cx="760" cy="90" r="4"/><circle class="pulse" cx="900" cy="170" r="5"/>
+      <circle class="pulse" cx="1050" cy="110" r="3.5"/><circle class="pulse" cx="980" cy="310" r="5"/>
+      <circle class="pulse" cx="1130" cy="260" r="3.5"/><circle class="pulse" cx="860" cy="420" r="4"/>
+      <circle class="pulse" cx="1010" cy="500" r="3.5"/><circle class="pulse" cx="1160" cy="40" r="3"/>
+      <circle class="pulse" cx="680" cy="230" r="3"/><circle class="pulse" cx="140" cy="520" r="3.5"/>
+      <circle class="pulse" cx="40" cy="430" r="3"/><circle class="pulse" cx="300" cy="560" r="3"/>
+    </g>
+  </svg>
+
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="/" aria-label="Blanched home">
+        <img src="https://media.base44.com/images/public/69852901cdb7defd78cff430/4ec122df2_with_padding.png" alt="Blanched" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+        <span class="wordmark">blanched</span>
+      </a>
+      <span class="status"><span class="dot" aria-hidden="true"></span>New website coming soon</span>
+    </div>
+
+    <div class="hero-body">
+      <p class="eyebrow">Hospitality technology · London</p>
+      <h1>Technology that keeps <em>hospitality</em> running.</h1>
+      <p class="lede">Blanched designs, installs and supports the networks, POS and systems behind restaurants, bars, cafés and hotels, built by people who have worked in hospitality, not just around it.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="mailto:hello@blanched.uk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          hello@blanched.uk
+        </a>
+        <a class="btn btn-ghost" href="tel:+442034110730">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          020 3411 0730
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="services" aria-label="What we do">
+    <div class="wrap">
+      <div class="grid">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><path d="M1.5 9a15 15 0 0 1 21 0"/><circle cx="12" cy="19.5" r="1"/></svg></div>
+          <h2>Networks</h2>
+          <p>UniFi and TP-Link Omada networks designed for venues: Wi-Fi, switching, CCTV and door access, installed and configured properly.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/><path d="M7 9h4"/><path d="M7 12h7"/></svg></div>
+          <h2>POS</h2>
+          <p>Lightspeed K-Series Partner. Menu builds, hardware, integrations and set-up that fits how your service actually runs.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg></div>
+          <h2>Venue openings</h2>
+          <p>From fit-out to first service: planning the technology, coordinating suppliers and getting you open on time.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
+          <h2>Support</h2>
+          <p>Remote and on-site aftersales support from the people who set it up, when something needs fixing.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap about-inner">
+      <h2>One partner for the technology behind service.</h2>
+      <div>
+        <p>Hospitality runs on systems that have to work at 8pm on a Saturday. Blanched brings hospitality experience and hands-on technical delivery together, so your network, POS and integrations are planned around real service, not a spec sheet.</p>
+        <p>Our full website, with services, hardware and online quotes, is launching shortly. Until then, we would be glad to hear about your venue.</p>
+        <div class="partners">
+          <span class="chip">Lightspeed Partner</span>
+          <span class="chip">UniFi reseller</span>
+          <span class="chip">TP-Link Omada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" aria-label="Contact">
+    <div class="wrap">
+      <div class="contact-card">
+        <div>
+          <h2>Opening, upgrading or fixing something?</h2>
+          <p>Tell us about your venue and what you need. We will come back to you with a clear plan and a quote.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:hello@blanched.uk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            hello@blanched.uk
+          </a>
+          <a href="tel:+442034110730">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            020 3411 0730
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Blanched Ltd · London</span>
+    <span>Hospitality technology · Networks · POS · Support</span>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
